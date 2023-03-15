@@ -4,7 +4,6 @@ main.registerForm section.form {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
 }
 
 main.registerForm section.form form {
@@ -15,7 +14,6 @@ main.registerForm section.form form {
   border-radius: 20px;
   gap: 20px;
   padding: 30px;
-  height: 85%;
   background-color: #709ce1e8;
   margin: 50px 0;
   box-shadow: 0 0 10px 5px rgb(0 0 0 / 25%);
@@ -25,6 +23,7 @@ main.registerForm section.form form>div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -42,6 +41,16 @@ main.registerForm section.form form input {
   outline: none;
   resize: none;
   border-radius: 18px;
+  text-align: center;
+}
+
+main.registerForm section.form form div.input {
+  height: 130px;
+  margin: 15px 15px;
+}
+
+main.registerForm section.form form div.feedback {
+  color: #dd4b3c;
 }
 
 main.registerForm section.form form label {
@@ -52,15 +61,23 @@ main.registerForm section.form form label {
   margin-bottom: 20px;
 }
 
+main.registerForm section.form form div.input-file input {
+  width: auto;
+  border: none;
+}
 
-main.registerForm section.form form div.input-user,
-main.registerForm section.form form div.input-pass {
+main.registerForm section.form form div.left-side,
+main.registerForm section.form form div.right-side {
   flex: 2;
 }
 
+main.registerForm section.form form div.inputs-top {
+  display: flex;
+}
 
 main.registerForm section.form form div.buttons {
   flex: 1;
+  flex-direction: row;
 }
 
 main.registerForm section.form form div.buttons button {
@@ -104,12 +121,6 @@ main.registerForm section.form form div.buttons button.btn-reset {
 main.registerForm section.form form div.buttons button.btn-reset:hover {
   background-color: #c42323;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
-}
-
-main.registerForm .check input {
-  accent-color: red;
-  justify-items: right;
-  margin: 0px 0px 10px 65px;
 }
 
 main.registerForm div.input {

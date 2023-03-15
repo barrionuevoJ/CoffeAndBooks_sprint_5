@@ -57,10 +57,6 @@ main.create section.add form div.input {
   margin: 15px 15px;
 }
 
-main.create section.add form div.input-file {
-  flex-direction: column;
-}
-
 main.create section.add form div.input-file input {
   width: auto;
   border: none;
