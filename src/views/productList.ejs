@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/Images/Logo.ico">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-productList.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Coffe & Books</title>
+</head>
+
+<body>
+
+
+    <%- include('partials/mainHeader') %>
+
+        <main class="listadoProductos">
+            <section class="lista">
+                <h1>Listado de productos</h1>
+                <div class="productos">
+                    <% lista.forEach(libro=> { %>
+                        <article>
+                            <img src="/Images/products/<%= libro.img %>">
+                            <div class="main-article">
+                                <h4 class="title">
+                                    <%= libro.titulo %>
+                                </h4>
+                                <h5 class="author">
+                                    <%= libro.autor %>
+                                </h5>
+                                <p class="price"> $ <%= toThousand( libro.precio ) %></p> <br>
+                            </div>
+                            <a href="/products/detail/<%= libro.id %>"><button class="btn-compra"> Ver
+                                    producto</button></a>
+                        </article>
+                        <% }); %>
+                </div>
+            </section>
+        </main>
+
+        <%- include('partials/mainFooter') %>
+</body>
+
+</html>

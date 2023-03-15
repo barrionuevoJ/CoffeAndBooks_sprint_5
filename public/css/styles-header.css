@@ -1,0 +1,189 @@
+header {
+    display: flex;
+    background-color: #a6d5eb;
+}
+
+header div.left-side {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+header div.mid-side {
+    display: flex;
+}
+
+header div.mid-side form {
+    display: flex;
+    width: 100%;
+}
+
+header div.mid-side form input {
+    width: 100%;
+    border: none;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+}
+
+header div.mid-side form button {
+    border: none;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+@media (min-width: 361px) {
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header div.left-side a {
+        display: none;
+    }
+
+    header div.left-side a.logo {
+        display: block;
+    }
+
+    header div.left-side img {
+        width: 75%;
+    }
+
+    header div.mid-side {
+        flex: 2;
+    }
+
+    header div.mid-side form input {
+        padding: 5%;
+    }
+
+    header div.mid-side form button {
+        padding: 5%;
+    }
+
+    header div.right-side {
+        display: none;
+    }
+
+    header div.titulo {
+        display: flex;
+        flex: 2;
+    }
+
+    header div.logo-header {
+        display: flex;
+        flex: 1;
+    }
+
+    header h1 {
+        padding-left: 4vw;
+        font-size: 1.6em;
+    }
+
+    header div.burger-menu {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        text-align: center;
+    }
+
+    header div.burger-menu i {
+        font-size: 3em;
+        margin: 5vw 7vw 5vw 0px;
+        padding: 1vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    header div.burger-menu {
+        display: none;
+    }
+
+    header {
+        height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        padding-left: 4vw;
+        font-size: 1.8em;
+    }
+
+    header div.titulo {
+        display: none;
+    }
+
+    header div.left-side {
+        justify-content: initial;
+    }
+
+    header div.left-side a.logo {
+        width: 15%;
+    }
+
+    header div.left-side a.logo img {
+        width: 100%;
+    }
+
+    header div.left-side a {
+        display: block;
+    }
+
+    header div.left-side a.home:hover,
+    header div.left-side a.books:hover {
+        border-bottom: 1px solid rgb(7, 107, 124);
+        color: black;
+    }
+
+    header div.mid-side {
+        flex: 1;
+    }
+
+    header div.mid-side form input {
+        padding: 2%;
+    }
+
+    header div.mid-side form button {
+        padding: 2%;
+    }
+
+    header div.right-side a.account,
+    header div.right-side a.cart,
+    header div.left-side a.home,
+    header div.left-side a.books {
+        margin: 0 2vw;
+        text-decoration: none;
+        color: black;
+    }
+
+    header div.logo-header {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    header div.right-side {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header div.right-side a.account {
+        padding: 2%;
+        border-radius: 10px;
+        background-color: #709ce1;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    header div.right-side a.account:hover {
+        background-color: #648bc9;
+    }
+
+    header div.right-side a.cart {
+        margin: 0;
+        font-size: 1.4em;
+    }
+}

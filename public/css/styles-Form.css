@@ -1,0 +1,97 @@
+main.create section.add form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 10% 0;
+    
+}
+
+.create .add {
+    background-color: rgb(173, 216, 230);
+    border-radius: 30px;
+}
+
+.create .add h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin: 5%;
+    
+}
+
+main.create section.add form input {
+    padding: 3% 10% 3% 10%;
+    margin: 5% 0 5% 0;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+}
+
+.create .add form select {
+    padding: 3% 5% 3% 5%;
+    border: none;
+    border-radius: 10px;
+}
+
+.create .add form .button {
+    background-color: deepskyblue;
+    padding: 3% 10% 3% 10%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin: 0 0 5% 0
+}
+
+.create .add form .button:hover {
+    background-color: #517fc8;
+}
+
+.create .add p {
+    display: flex;
+    justify-content: start;
+}
+
+@media (min-width: 769px) {
+    .create .add{
+        width: 90%;
+        height: 10%;
+        margin: 0 0 0 0;
+    }
+
+
+    .create .add form{
+        display: flex;
+        order: 1
+    }
+
+    .create .add form input {
+        padding: 3% 10% 3% 10%;
+        margin: 2% 10px 2% 10px;
+    }
+
+    .create .add form .button {
+        order: 3;
+        margin: 200px 0 0 0; 
+    }
+
+    .create .add form select {
+        order: 1;
+    }
+
+    .create .add h1 {
+        justify-content: center;
+        margin: 0 0 0 10px;
+    }
+
+    main.create section.add form {
+        padding: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main.create section.add p {
+        display: none;
+    }
+}

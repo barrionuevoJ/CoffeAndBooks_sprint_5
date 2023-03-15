@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/Images/Logo.ico">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Coffe & Books</title>
+</head>
+
+<body>
+
+    <%- include('partials/mainHeader') %>
+
+        <main>
+            <section class="product-detail">
+                <article class="product">
+                    <div class="image">
+                        <img src="/Images/products/<%= libro.img %>" alt="productImg">
+                    </div>
+
+                    <div class="descripcion">
+                        <h1 style="text-align: center; font-size: 1.8em;">
+                            <%= libro.titulo %>
+                        </h1>
+                        <div class="genre">
+                            <span>
+                                <%= libro.genero %>
+                            </span>
+                        </div>
+                        <h3>Descripción:</h3>
+                        <span>
+                            <%= libro.descripcion %>
+                        </span>
+                        <div class="prices">
+                            <h3> $ <%= toThousand( libro.precio ) %></h3>
+                            <h3>Envio: $500</h3>
+                        </div>
+                        <div class="buttons">
+                            <form action="/productCart" method="post">
+                                <button type="submit" class="button-add">Añadir al carrito</button>
+                            </form>
+                            <a href="/products/edit/<%= libro.id %>" class="button-edit">Editar producto</a>
+                            <form action="/products/delete/<%= libro.id %>?_method=DELETE" method="POST"
+                                style="display: inline-flex">
+                                <button type="submit" class="button-delete">Eliminar</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <%- include('partials/mainFooter') %>
+
+</body>
+
+</html>

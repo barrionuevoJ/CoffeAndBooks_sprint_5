@@ -1,0 +1,114 @@
+section.carrito{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+section.carrito article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: #fcfbfb;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 25%);
+    align-items: center;
+    width: 80%;
+}
+
+*{
+    box-sizing: border-box;
+}
+main div.titular{
+    color: #525758;
+    padding-top: 10px;
+}
+
+main{
+    padding:10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+section.carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+/*section.carrito article div.izquierda {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}*/
+section.carrito article .izquierda .info{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+section.carrito article  img {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+article div.info{
+    margin:auto;
+    padding-left: 4%;
+}
+
+
+article div.izquierda{
+    margin: auto;
+    margin-left: 5%;
+}
+p #titulo{
+    font-size: medium;
+}
+article div.derecha{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.derecha button{
+    background-color: #ff6161;
+    border-radius: 10px;
+    border-style: none;
+    padding: 2%;
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+}
+input{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    width: 35%;
+    align-items: center;
+    margin: auto;
+    border-radius: 5px;
+    border-color: #709ce1;
+    border-style: groove;
+    padding: 5%;
+}
+
+.info h1{
+    font-style: italic;
+}
+.total {
+    margin-top: auto;
+    align-items: center;
+}
+.total button{
+    background-color: #709ce1;
+    border-style: none;
+    padding: 5px;
+    border-radius: 10px;
+    width: 130px;
+}

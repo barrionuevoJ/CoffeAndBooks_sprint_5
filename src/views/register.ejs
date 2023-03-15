@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/Images/Logo.ico">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-register.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+
+    <title>Coffe&Books</title>
+</head>
+
+<body>
+
+    <%- include('partials/mainHeader') %>
+
+        <main class="registerForm">
+            <section class="form">
+
+                <form method="POST" action="/">
+                    <h1>Formulario de registro</h1>
+                    <div class="input-user">
+                        <div class="input">
+                            <label for="userName"> Nombre de Usuario</label>
+                            <input type="text" name="userName" id="userName" placeholder="Ingrese su usuario"
+                                minlength="3" required />
+                        </div>
+
+                        <div class="input">
+                            <label for="email"> Correo Electronico</label>
+                            <input type="email" name="email" id="email" placeholder="Ingrese su correo" minlength="3"
+                                required />
+                        </div>
+                    </div>
+                    <div class="input-pass">
+                        <div class="input">
+                            <label for="password"> Contraseña </label>
+                            <input type="password" name="password" id="password" placeholder="Ingrese su contraseña"
+                                minlength="6" required />
+                        </div>
+
+                        <div class="input">
+                            <label for="password-repeat"> Repetir contraseña</label>
+                            <input type="password-repeat" name="password-repeat" id="password-repeat" placeholder="Repita su contraseña"
+                                minlength="6" required />
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn-submit" type="submit">
+                            Registrarse
+                        </button>
+
+                        <button class="btn-reset" type="reset">
+                            Borrar
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+
+        <%- include('partials/mainFooter') %>
+
+</body>
+
+</html>

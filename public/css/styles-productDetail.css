@@ -1,0 +1,167 @@
+section.product-detail {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+}
+
+section.product-detail div.title {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: 150%;
+  font-style: normal;
+}
+
+section.product-detail div.image {
+  margin-top: 0%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+section.product-detail div.description {
+  display: flex;
+  justify-content: space-evenly;
+  flex-shrink: 5;
+  font-size: 150%;
+
+}
+
+section.product-detail div.prices {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+section.product-detail div.Des {
+  margin-top: 5%;
+  font-size: 150%;
+}
+
+section.product-detail div.genre {
+  display: flex;
+  justify-content: center;
+  font-size: 150%;
+  padding: 1%;
+  background-color: rgba(180, 192, 240, 0.386);
+  border-radius: 10%;
+}
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH */
+section.product-detail form {
+  display: flex;
+  justify-content: center;
+}
+
+section.product-detail form button.button-delete {
+  background-color: rgb(180, 192, 240);
+}
+
+section.product-detail form button.button-add {
+  background-color: rgb(180, 192, 240);
+}
+
+section.product-detail a.button-edit,
+section.product-detail form button {
+  display: flex;
+  margin: 35px 0;
+  border-radius: 10px;
+  width: 300px;
+  height: 35px;
+  justify-content: center;
+  outline: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgb(0 0 0 / 10%);
+  transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+section.product-detail form button.button-add {
+  background-color: #4cd95b;
+}
+
+section.product-detail form button.button-add:hover {
+  background-color: #31c423;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+section.product-detail a.button-edit {
+  background-color: #c6df38;
+  color: black;
+  text-decoration: none;
+}
+
+section.product-detail a.button-edit:hover {
+  background-color: #c4b423;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+section.product-detail form button.button-delete {
+  background-color: #d94c4c;
+}
+
+section.product-detail form button.button-delete:hover {
+  background-color: #c42323;
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+section.product-detail article.product {
+  background-color: #ffffffcc;
+}
+
+@media (min-width: 769px) {
+  section.product-detail div.image {
+    width: 25vw;
+    height: 80vh;
+  }
+
+  section.product-detail div.image img {
+    width: 100%;
+  }
+
+  section.product-detail article.product {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100vh;
+    margin: 50px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%);
+  }
+
+  section.product-detail div.descripcion {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    justify-content: space-evenly;
+  }
+
+  section.product-detail div.description {
+    display: flex;
+    justify-content: center;
+    font-size: 200%;
+    margin-top: 0%;
+    margin-left: 40%;
+    margin-right: 20%;
+    background-color: aliceblue;
+  }
+
+  section.product-detail div.cart {
+    font-size: 1em;
+  }
+
+  section.product-detail div.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+}

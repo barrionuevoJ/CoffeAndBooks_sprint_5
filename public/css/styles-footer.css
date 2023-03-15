@@ -1,0 +1,267 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #a6d5eb;
+}
+
+footer div.copyright-info {
+    background-color: #93c8e1;
+}
+
+footer div.footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+footer div.footer-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+}
+
+footer div.footer-top .footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 361px) {
+    footer div.footer-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh;
+        align-items: flex-start;
+    }
+
+    footer div.footer-left p {
+        font-size: 0.9em;
+    }
+
+    footer div.footer-mid .text p {
+        padding: 3px 0;
+        cursor: pointer;
+    }
+
+    footer div.footer-top .redes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    footer div.footer-top .redes i {
+        margin-right: 5px;
+    }
+
+    footer div.footer-top .redes h4,
+    footer div.footer-top .redes a {
+        margin-bottom: 2vh;
+        text-decoration: none;
+        color: black;
+    }
+
+    footer div.subscribe {
+        display: none;
+    }
+
+    footer div.copyright-info .redes {
+        display: none;
+    }
+
+    footer div.copyright-info .logoCopy {
+        display: none;
+    }
+
+    footer div.copyright-info {
+        text-align: center;
+        font-size: 1em;
+        border-top: none;
+    }
+
+    footer div.footer-mid div.title {
+        width: 100%;
+        text-align: center;
+    }
+
+    footer div.footer-mid div.text {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    footer div.footer-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh;
+        align-items: flex-start;
+    }
+
+    footer div.footer-top .footer-left,
+    footer div.footer-top .footer-mid,
+    footer div.footer-top .footer-right {
+        font-size: 0.8em;
+    }
+
+
+    footer div.footer-left .contacts h4 {
+        padding: 5vw 0px;
+        text-align: center;
+    }
+
+
+    footer div.footer-mid h4 {
+        margin-bottom: 2vh;
+    }
+
+
+    footer div.footer-mid .text p {
+        margin-bottom: 1vh;
+    }
+
+
+    footer div.footer-mid .text {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        align-items: center;
+    }
+
+    footer div.footer-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 2vh;
+        align-items: flex-start;
+    }
+
+    footer div.footer-left .contacts h4 {
+        padding: 2vw 0px;
+        text-align: center;
+    }
+
+    footer div.footer-left p {
+        font-size: 0.9em;
+    }
+
+    footer div.footer-mid .text p {
+        padding: 3px 0;
+    }
+
+    footer div.footer-top .redes {
+        display: none;
+    }
+
+    footer div.copyright-info div.redes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+    }
+
+    footer div.subscribe {
+        display: block;
+        width: 75%;
+    }
+
+    footer div.subscribe div.mail {
+        margin-top: 2vh;
+    }
+
+    footer div.footer-right div.subscribe div.mail form {
+        display: flex;
+    }
+
+    footer div.subscribe .mail button,
+    footer div.subscribe .mail input {
+        padding: 15px 12px;
+        border-style: none;
+        outline: none;
+    }
+
+    footer div.subscribe .mail input {
+        border-radius: 8px 0 0 8px;
+        width: 100%;
+    }
+
+    footer div.copyright-info .logoCopy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 2;
+    }
+
+    footer div.footer-mid h4 {
+        margin-bottom: 2vh;
+    }
+
+    footer div.footer-mid .text p {
+        margin-bottom: 1vh;
+    }
+
+    footer div.footer-mid .text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div.subscribe .mail button {
+        background-color: #478eff;
+        color: white;
+        cursor: pointer;
+        border-radius: 0 8px 8px 0;
+    }
+
+    footer div.copyright-info {
+        display: flex;
+        text-align: center;
+        font-size: 1em;
+        padding: 2vh;
+        align-items: center;
+    }
+
+    footer div.copyright-info span {
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+        margin-right: 2%;
+    }
+
+    footer div.copyright-info div.copyright-txt span {
+        font-size: 0.8em;
+    }
+
+    footer div.copyright-info div.copyright-txt {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+    footer div.copyright-info div.redes i {
+        font-size: 1.5em;
+        margin: 0 2vw;
+        color: black;
+        text-decoration: none;
+    }
+
+    footer div.footer-left .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer div.footer-left {
+        width: 75vw;
+    }
+
+    footer div.footer-top .footer-left,
+    footer div.footer-top .footer-mid,
+    footer div.footer-top .footer-right {
+        font-size: 1em;
+    }
+}

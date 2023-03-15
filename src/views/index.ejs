@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="/Images/Logo.ico">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/styles-header.css">
+    <link rel="stylesheet" href="/css/styles-footer.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Coffe & Books</title>
+</head>
+
+<body>
+
+    <%- include('partials/mainHeader') %>
+
+        <main class="home">
+            <section class="masVendidos" id="masVendidos">
+                <h2>Libros más vendidos</h2>
+                <div class="productos">
+
+                    <% masVendidos.forEach(libro=> { %>
+
+                        <%- include('partials/articleIndex', {libro}) %>
+
+                    <% }) %>
+
+                </div>
+            </section>
+
+            <section class="ofertas" id="ofertas">
+                <h2>Ofertas imperdibles</h2>
+                <div class="productos">
+
+                    <% ofertas.forEach(libro=> { %>
+
+                        <%- include('partials/articleIndex', {libro}) %>
+
+                    <% }) %>
+                </div>
+            </section>
+
+            <section class="interes" id="interes">
+                <h2>También podría interesarte</h2>
+                <div class="productos">
+
+                    <% interes.forEach(libro=> { %>
+
+                        <%- include('partials/articleIndex', {libro}) %>
+
+                    <% }) %>
+
+                </div>
+            </section>
+        </main>
+
+        <%- include('partials/mainFooter') %>
+
+</body>
+
+</html>

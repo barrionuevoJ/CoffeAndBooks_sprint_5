@@ -1,0 +1,142 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../Images/Background-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: black;
+    font-family: 'Roboto';
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main.home section.ofertas,
+main.home section.masVendidos,
+main.home section.interes {
+    margin: 7vh 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #ffffff7d;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%)
+}
+
+main.home section div.productos {
+    padding: 2vh 3vw 3vh 3vw;
+}
+
+main.home section h3 {
+    margin: 20px 0px;
+}
+
+main.home article div.main-article {
+    padding: 15px;
+}
+
+main.home section div.productos div.main-article p {
+    margin-top: 10px;
+}
+
+/* boton de compra */
+
+main.home section article button.btn-compra {
+    padding: 15px 35px;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 52%);
+    background-color: #a6d5eb;
+    cursor: pointer;
+}
+
+main.home section article button.btn-compra:hover {
+    background-color: #87b9d1;
+}
+
+@media (min-width: 361px) {
+    main.home section article img {
+        max-width: 315px;
+        max-height: 475px;
+    }
+
+    main.home section h2 {
+        margin: 40px 0 0 0;
+    }
+
+    main.home section article {
+        margin: 20px 0 45px 0;
+    }
+
+    main.home section article div.main-article h4.title {
+        font-size: 2em;
+    }
+
+    main.home section article div.main-article h5.author,
+    main.home section article div.main-article p.price {
+        font-size: 1.3em;
+    }
+
+    main.home section div.productos {
+        display: flex;
+        padding: 2vh 3vw 3vh 3vw;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    main.home section a {
+        text-decoration: none;
+        color: white;
+    }
+
+    main.home section article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 30px 0px;
+        height: 67vh;
+    }
+
+    main.home section h2 {
+        margin: 10px 0px;
+    }
+
+    main.home section article img {
+        width: 15vw;
+        height: 45vh;
+    }
+
+    main.home section article div.main-article {
+        display: flex;
+        flex: 2;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 20vw;
+    }
+
+    main.home section article div.main-article h4.title {
+        font-size: inherit;
+    }
+
+    main.home section article div.main-article h5.author,
+    main.home section article div.main-article p.price {
+        font-size: inherit;
+    }
+
+    main.home section div.productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
