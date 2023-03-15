@@ -1,15 +1,15 @@
 const { body } = require('express-validator');
-const path = require('path')
+const path = require('path');
 
 const productValidation = [
     body('titulo')
-        .isEmpty().withMessage('El titulo es obligatorio.').bail()
+        .notEmpty().withMessage('El titulo es obligatorio.').bail()
         .isLength({ min: 2 }).withMessage('El titulo tiene que tener un minimo de 2 caracteres'),
     body('autor')
-        .isEmpty().withMessage('El autor es obligatorio.').bail()
+        .notEmpty().withMessage('El autor es obligatorio.').bail()
         .isLength({ min: 3 }).withMessage('El autor tiene que tener un minimo de 3 caracteres'),
     body('descripcion')
-        .isEmpty().withMessage('La descripción es obligatoria').bail()
+        .notEmpty().withMessage('La descripción es obligatoria').bail()
         .isLength({ min: 10 }).withMessage('La descripcion tiene que tener un minimo de 10 caracteres.').bail(),
     body('categoria').isLength({ min: 1 }).withMessage('La categoria es obligatoria.').bail(),
     body('descuento').isNumeric().default(0).withMessage('El descuento debe ser un numero.').bail(),
