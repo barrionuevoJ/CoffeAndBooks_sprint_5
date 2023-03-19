@@ -11,18 +11,18 @@ const controlador = {
     // Mostrar todos los productos
     all: (req, res) => {
         const listaProductos = productModel.all()
-        res.render('productList', { lista: listaProductos, toThousand })
+        res.render('products/productList', { lista: listaProductos, toThousand })
     },
 
     // Mostrar un producto
     detail: (req, res) => {
         const product = productModel.find(req.params.id)
-        res.render('productDetail', { libro: product, toThousand })
+        res.render('products/productDetail', { libro: product, toThousand })
     },
 
     // Crear un producto
     create: (req, res) => {
-        res.render('formCreate')
+        res.render('products/formCreate')
     },
 
 
@@ -37,7 +37,7 @@ const controlador = {
                     path.resolve(__dirname, '../../public/Images/products/' + req.file.filename)
                 )
             }
-			return res.render('formCreate', {
+			return res.render('products/formCreate', {
 				errors: resultValidation.mapped(),
 				old: req.body
 			});
@@ -54,7 +54,7 @@ const controlador = {
     // Editar un producto
     edit: (req, res) => {
         let productToEdit = productModel.find(req.params.id)
-        res.render('formEdit', { libro: productToEdit })
+        res.render('products/formEdit', { libro: productToEdit })
     },
 
     // Actualizar un producto

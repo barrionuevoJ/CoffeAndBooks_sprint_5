@@ -1,19 +1,18 @@
 [
-    {
-        
-            "id": 1,
-            "userName": "user1",
-            "email": "user1@example.com",
-            "password": "password123"
-            
-    },
-    {       
-    
-            "id": 2,
-            "userName": "user2",
-            "email": "user2@example.com",
-            "password": "password456"
-            
-          
-    }
+ {
+  "firstName": "Pedro",
+  "password": "$2a$10$GrkTKNl8Ihn0/eRALrG8hu3J9rO/pS.VE7lHAhF3K2LaNIdhml6ES",
+  "lastName": "Martinez",
+  "email": "elpedrito@gmail.com",
+  "profileimg": "default-user.png",
+  "id": 1
+ },
+ {
+  "firstName": "Pedro",
+  "password": "$2a$10$LecynId21dQzXsKlBqL2v.LyiyQFIaPL/4Jux8VSaGZNjHAPd1zt.",
+  "lastName": "Martinez",
+  "email": "elpedrito1@gmail.com",
+  "profileimg": "default-user.png",
+  "id": 2
+ }
 ]

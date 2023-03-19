@@ -20,16 +20,16 @@
 
 <body>
 
-    <%- include('partials/mainHeader') %>
+    <%- include('../partials/mainHeader') %>
 
         <main class="home">
             <section class="masVendidos" id="masVendidos">
-                <h2>Libros más vendidos</h2>
+                <h1>Libros más vendidos</h1>
                 <div class="productos">
 
                     <% masVendidos.forEach(libro=> { %>
 
-                        <%- include('partials/articleIndex', {libro}) %>
+                        <%- include('../partials/articleIndex', {libro}) %>
 
                     <% }) %>
 
@@ -37,24 +37,24 @@
             </section>
 
             <section class="ofertas" id="ofertas">
-                <h2>Ofertas imperdibles</h2>
+                <h1>Ofertas imperdibles</h1>
                 <div class="productos">
 
                     <% ofertas.forEach(libro=> { %>
 
-                        <%- include('partials/articleIndex', {libro}) %>
+                        <%- include('../partials/articleIndex', {libro}) %>
 
                     <% }) %>
                 </div>
             </section>
 
             <section class="interes" id="interes">
-                <h2>También podría interesarte</h2>
+                <h1>También podría interesarte</h1>
                 <div class="productos">
 
                     <% interes.forEach(libro=> { %>
 
-                        <%- include('partials/articleIndex', {libro}) %>
+                        <%- include('../partials/articleIndex', {libro}) %>
 
                     <% }) %>
 
@@ -62,7 +62,7 @@
             </section>
         </main>
 
-        <%- include('partials/mainFooter') %>
+        <%- include('../partials/mainFooter') %>
 
 </body>
 

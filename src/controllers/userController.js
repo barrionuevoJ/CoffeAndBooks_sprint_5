@@ -1,19 +1,61 @@
+const jsonDB = require('../model/jsonDatabase');
+const fs = require('fs');
+const path = require('path');
+const bcrypt = require('bcryptjs');
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const { validationResult } = require('express-validator')
+const userModel = jsonDB('users')
+const productModel = jsonDB('products')
+
 const controlador = {
     login: (req, res) => {
-        res.render('login', {});
+        res.render('users/login', {});
+    },
+
+    cart: (req, res) => {
+        const carrito = productModel.carrito()
+        res.render('users/productCart', { carrito, toThousand })
     },
 
     register: (req, res) => {
-        res.render('register', {});
+        res.render('users/register', {});
     },
 
-    formCreate: (req,res) => {
-        res.render('formCreate', {})
-    },
-    
-    formEdit: (req,res) => {
-        res.render('formEdit', {})
-    },
+    newUser: (req, res) => {
+        let user = req.body;
+        let errors = validationResult(req);
+        if (errors.isEmpty()) {
+            if (userModel.findByField('email', req.body.email)) {
+                if (req.file) {
+                    fs.unlinkSync(
+                        path.resolve(__dirname, '../../public/Images/users/' + req.file.filename)
+                    )
+                }
+                let errors = {
+                    email: {
+                        msg: 'Email existente'
+                    }
+                }
+                delete req.body.password;
+                res.render('register', { errors, old: req.body });
+            } else {
+                user.profileimg = req.file ? req.file.filename : 'default-user.png';
+                delete user["passwordConfirm"];
+                user.password = bcrypt.hashSync(user.password, 10);
+                userModel.create(user);
+                res.redirect('/');
+            }
+        } else {
+            if (req.file) {
+                fs.unlinkSync(
+                    path.resolve(__dirname, '../../public/Images/users/' + req.file.filename)
+                )
+            }
+            delete req.body.password;
+            res.render('users/register', { errors: errors.mapped(), old: req.body });
+        };
+    }
 }
 
 module.exports = controlador;

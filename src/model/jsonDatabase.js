@@ -29,7 +29,7 @@ const modelController = function (name) {
         },
         // Leo todos los registros del archivo
         all: function () {
-            
+
             return this.readFile();
         },
         // Busco por id
@@ -83,49 +83,50 @@ const modelController = function (name) {
         masVendidos: function () {
             let rows = this.readFile();
             const masVendidos = rows.filter(i => i.categoria == 'masVendidos')
-            return masVendidos 
+            return masVendidos
 
         },
 
         ofertas: function () {
             let rows = this.readFile();
             const ofertas = rows.filter(i => i.categoria == 'ofertas')
-            return ofertas 
+            return ofertas
 
         },
 
         interes: function () {
             let rows = this.readFile();
             const interes = rows.filter(i => i.categoria == 'interes')
-            return interes 
+            return interes
 
         },
 
         carrito: function () {
             let rows = this.readFile();
             const carrito = rows.filter(i => i.categoria == 'masVendidos')
-            return carrito 
+            return carrito
 
         },
 
-        findFirstByField: function(text){
+        findFirstByField: function (text) {
             let rows = this.all();
-    
+
             let elementFound = rows.find(element => element.id == text);
             return elementFound;
         },
 
-        findAllByField: function(text){
+        findAllByField: function (text) {
             let rows = this.all();
             let allElementsFound = rows.filter(element => element.estado == text);
             return allElementsFound;
+        },
+
+        findByField: function (field, value) {
+            let rows = this.all();
+
+            let elementFound = rows.find(element => element[field] == value);
+            return elementFound;
         }
-
-
-
-       
-
-
 
     }
 }

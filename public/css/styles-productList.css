@@ -7,6 +7,7 @@ main.listadoProductos section.lista {
     flex-direction: column;
     text-align: center;
     margin: 50px 0;
+    border-radius: 30px;
     background-color: #ffffff7d;
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%);
 }
@@ -30,44 +31,6 @@ main.listadoProductos section div.productos div.main-article p {
     flex:1;
     margin-top: 10px;
 }
-
-/* @media (min-width: 361px) {
-    main.listadoProductos section article img {
-        max-width: 315px;
-        max-height: 475px;
-    }
-
-    main.listadoProductos section h2 {
-        margin: 40px 0 0 0;
-    }
-
-    main.listadoProductos section article {
-        margin: 20px 0 45px 0;
-    }
-
-    main.listadoProductos section div.productos {
-        display: flex;
-        padding: 2vh 3vw 3vh 3vw;
-        flex-direction: column;
-        align-items: center;
-    }
-} */
-
-/* @media (min-width: 1024px) {
-    main.listadoProductos section.lista article img {
-        width: 15vw;
-        height: 45vh;
-    }
-
-    main.listadoProductos section.lista article div.main-article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 20vw;
-        height: 20vh;
-        padding: 15px;
-    }
-} */
 
 @media (min-width: 361px) {
     main.listadoProductos section article img {
@@ -111,7 +74,7 @@ main.listadoProductos section div.productos div.main-article p {
         flex-direction: column;
         align-items: center;
         height: 67vh;
-        margin: 7vh 0;
+        margin: 30px 0;
     }
 
     main.listadoProductos section h2 {
@@ -144,7 +107,7 @@ main.listadoProductos section div.productos div.main-article p {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         align-items: flex-start;
     }
 }

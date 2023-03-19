@@ -9,14 +9,8 @@ const mainController = {
         const masVendidos = productModel.masVendidos('masVendidos')
         const ofertas = productModel.ofertas('ofertas')
         const interes = productModel.interes('interes')
-        res.render('index', { masVendidos, ofertas, interes, toThousand })
+        res.render('main/index', { masVendidos, ofertas, interes, toThousand })
     },
-
-    productCart: (req, res) => {
-        
-        const carrito = productModel.carrito()
-        res.render('productCart', { carrito, toThousand })
-    }
 }
 
 

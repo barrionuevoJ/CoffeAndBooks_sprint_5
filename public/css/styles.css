@@ -67,7 +67,7 @@ main.home section article button.btn-compra:hover {
         max-height: 475px;
     }
 
-    main.home section h2 {
+    main.home section h1 {
         margin: 40px 0 0 0;
     }
 
@@ -106,8 +106,8 @@ main.home section article button.btn-compra:hover {
         height: 67vh;
     }
 
-    main.home section h2 {
-        margin: 10px 0px;
+    main.home section h1 {
+        margin: 30px 0 0 0;
     }
 
     main.home section article img {
