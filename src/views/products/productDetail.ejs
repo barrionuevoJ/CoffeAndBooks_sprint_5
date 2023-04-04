@@ -39,8 +39,11 @@
                                 <%= libro.genero %>
                             </span>
                         </div>
-                        <h3>Descripción:</h3>
-                        <span>
+
+                        <div class="des-t">
+                            <h3>Descripción:</h3>
+                        </div>
+                        <span class="Des">
                             <%= libro.descripcion %>
                         </span>
                         <div class="prices">
@@ -51,10 +54,16 @@
                             <form action="/productCart" method="post">
                                 <button type="submit" class="button-add">Añadir al carrito</button>
                             </form>
-                            <a href="/products/edit/<%= libro.id %>" class="button-edit">Editar producto</a>
+                        </div>
+
+                        <div class="admin">
+                            <a href="/products/edit/<%= libro.id %>" class="button-edit">
+                                <i class="fa-solid fa-pen"></i>
+                            </a>
+                            
                             <form action="/products/delete/<%= libro.id %>?_method=DELETE" method="POST"
                                 style="display: inline-flex">
-                                <button type="submit" class="button-delete">Eliminar</button>
+                                <button type="submit" class="button-delete"><i class="fa-solid fa-trash"></i></button>
                             </form>
                         </div>
                     </div>

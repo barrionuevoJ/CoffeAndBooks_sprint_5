@@ -4,48 +4,44 @@ section.product-detail {
   font-style: normal;
 }
 
-section.product-detail div.title {
+section.product-detail .descripcion h1 {
   display: flex;
-  justify-content: center;
-  margin-top: 10%;
-  font-size: 150%;
-  font-style: normal;
+  justify-content: start;
+  margin: 35px 0 10px;
 }
 
 section.product-detail div.image {
-  margin-top: 0%;
+
   display: flex;
   justify-content: center;
   margin: 20px;
-}
-
-section.product-detail div.description {
-  display: flex;
-  justify-content: space-evenly;
-  flex-shrink: 5;
-  font-size: 150%;
-
 }
 
 section.product-detail div.prices {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 5%;
+  margin-top: 85px;
+  border-style: solid;
+  border-color: rgb(166, 179, 231);
 }
 
-section.product-detail div.Des {
-  margin-top: 5%;
-  font-size: 150%;
+section.product-detail .descripcion span.Des {
+  margin: 30px 0 -35px 0;
+  font-size: 1.1em;
+}
+
+section.product-detail .descripcion div.des-t {
+  margin-top: 30px;
 }
 
 section.product-detail div.genre {
   display: flex;
   justify-content: center;
-  font-size: 150%;
+  font-size: 1.5em;
   padding: 1%;
   background-color: rgba(180, 192, 240, 0.386);
-  border-radius: 10%;
+  border-radius: 10px;
 }
 
 /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH */
@@ -62,10 +58,8 @@ section.product-detail form button.button-add {
   background-color: rgb(180, 192, 240);
 }
 
-section.product-detail a.button-edit,
-section.product-detail form button {
-  display: flex;
-  margin: 35px 0;
+section.product-detail .buttons form button {
+  margin: 20px 0;
   border-radius: 10px;
   width: 300px;
   height: 35px;
@@ -78,34 +72,36 @@ section.product-detail form button {
   transition: all 0.3s ease 0s;
   text-transform: uppercase;
   align-self: center;
+  text-align: center;
 }
 
 section.product-detail form button.button-add {
-  background-color: #4cd95b;
+  height: 60px;
+  background-color: #9abee8;
 }
 
 section.product-detail form button.button-add:hover {
-  background-color: #31c423;
+  background-color: #6a8aad;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 section.product-detail a.button-edit {
-  background-color: #c6df38;
+  background-color: #a6d5eb;
   color: black;
   text-decoration: none;
 }
 
 section.product-detail a.button-edit:hover {
-  background-color: #c4b423;
+  background-color: #5488a0;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
 section.product-detail form button.button-delete {
-  background-color: #d94c4c;
+  background-color: #db6161;
 }
 
 section.product-detail form button.button-delete:hover {
-  background-color: #c42323;
+  background-color: #874a4a;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -115,13 +111,11 @@ section.product-detail article.product {
 
 @media (min-width: 769px) {
   section.product-detail div.image {
-    width: 25vw;
-    height: 80vh;
+    width: 20vw;
+    height: 60vh;
+    
   }
 
-  section.product-detail div.image img {
-    width: 100%;
-  }
 
   section.product-detail article.product {
     display: flex;
@@ -137,31 +131,59 @@ section.product-detail article.product {
   section.product-detail div.descripcion {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    justify-content: center;
+    width: 30%;
     height: 100%;
-    margin: 20px 0;
+    margin: 20px -2px;
     letter-spacing: 1px;
-    justify-content: space-evenly;
   }
 
   section.product-detail div.description {
     display: flex;
     justify-content: center;
-    font-size: 200%;
-    margin-top: 0%;
-    margin-left: 40%;
-    margin-right: 20%;
     background-color: aliceblue;
+  }
+
+  section.product-detail div.description div.left {
+    display: flex;
+    justify-content: space-evenly;
   }
 
   section.product-detail div.cart {
     font-size: 1em;
   }
 
-  section.product-detail div.buttons {
+  section.product-detail .descripcion .admin {
+
+    border-radius: 12px;
+    border-style: solid;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
+    margin: 100px 0 0 0;
+  }
+
+  section.product-detail .descripcion div.admin .button-delete {
+    border: none;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 1.5em;
+    border-radius: 15px;
+    margin: 10px 0 10px 0;
+  }
+  
+  section.product-detail div.admin .button-edit{
+    justify-content: center;
+    display: flex;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 15px;
+    align-items: center;
+    margin: 10px 0 10px 0;
   }
 
 }

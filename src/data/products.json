@@ -1,17 +1,17 @@
 [
- {
-  "id": "1",
-  "titulo": "They both die at the end",
-  "autor": "Adam Silvera",
-  "descripcion": "¿Puede un solo día albergar toda una vida? En un presente alternativo, en el que es posible predecir la muerte con un plazo de veinticuatro horas, Mateo Torrez y Rufus Emeterio acaban de recibir la llamada más temida: la misma que te avisa de que ha llegado tu hora final.",
-  "precio": "13239",
-  "descuento": "4",
-  "cantidad": "2",
-  "categoria": "masVendidos",
-  "img": "They-Both-Die-At-The-End.jpg",
-  "genero": "Novela Juvenil, romance, aventura"
- },
- {
+{
+"id": "1",
+"titulo": "They both die at the end",
+"descripcion": "¿Puede un solo día albergar toda una vida? En un presente alternativo, en el que es posible predecir la muerte con un plazo de veinticuatro horas, Mateo Torrez y Rufus Emeterio acaban de recibir la llamada más temida: la misma que te avisa de que ha llegado tu hora final.",
+"autor": "Adam Silvera",
+"categoria": "masVendidos",
+"genero": "Novela Juvenil, romance, aventura",
+"cantidad": "2",
+"descuento": "4",
+"precio": "13239",
+"img": "They-Both-Die-At-The-End.jpg"
+},
+{
   "id": "2",
   "titulo": "Divergent",
   "autor": "Veronica Roth",
