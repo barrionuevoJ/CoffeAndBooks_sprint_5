@@ -14,5 +14,29 @@
   "email": "elpedrito1@gmail.com",
   "profileimg": "default-user.png",
   "id": 2
+ },
+ {
+  "firstName": "Julian",
+  "password": "$2a$10$HC7yBeNKloOa0UssmI8yoeLHBA5GaLwOdkyXVp7AU50ZoLoUIk0fC",
+  "lastName": "Barrionuevo",
+  "email": "julianbarrionuevo10@gmail.com",
+  "profileimg": "user-img-1680741202868.jpeg",
+  "id": 3
+ },
+ {
+  "firstName": "Valentino",
+  "password": "$2a$10$GjiExToqSnUO.u/mW4AnYezdyfST9tcS1WdJ1XAD.YhN4NzT7zN3.",
+  "lastName": "Dell'Olio",
+  "email": "valendell@gmail.com",
+  "profileimg": "user-img-1680741321910.jpg",
+  "id": 4
+ },
+ {
+  "firstName": "Kiara",
+  "password": "$2a$10$Gf45YBVAt1dvxEBgvx8z1.NeHK5GZlpqKd5OK5UoRryMmJHP9DFAq",
+  "lastName": "Ramos",
+  "email": "Kiarramos@gmail.com",
+  "profileimg": "user-img-1680741482826.jpeg",
+  "id": 5
  }
 ]

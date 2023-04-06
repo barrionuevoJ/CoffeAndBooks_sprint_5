@@ -9,6 +9,11 @@ const userModel = jsonDB('users')
 const productModel = jsonDB('products')
 
 const controlador = {
+    profile: (req, res) => {
+        const user = userModel.find(req.params.id)
+        res.render('users/profile', { user })
+    },
+
     login: (req, res) => {
         res.render('users/login', {});
     },
@@ -44,7 +49,7 @@ const controlador = {
                 delete user["passwordConfirm"];
                 user.password = bcrypt.hashSync(user.password, 10);
                 userModel.create(user);
-                res.redirect('/');
+                res.redirect('/users/profile/' + user.id);
             }
         } else {
             if (req.file) {

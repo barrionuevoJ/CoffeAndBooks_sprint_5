@@ -7,6 +7,7 @@ const uploadFile = multerMiddleware('users', 'user');
 const userRegisterValidation = require('../middleware/userRegisterValidation')
 
 router.get('/login', userController.login);
+router.get('/profile/:id', userController.profile);
 
 // Formulario de registro de usuario
 router.get('/register', userController.register);
