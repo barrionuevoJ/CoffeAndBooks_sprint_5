@@ -43,7 +43,7 @@ const controlador = {
                     }
                 }
                 delete req.body.password;
-                res.render('register', { errors, old: req.body });
+                res.render('users/register', { errors, old: req.body });
             } else {
                 user.profileimg = req.file ? req.file.filename : 'default-user.png';
                 delete user["passwordConfirm"];

@@ -38,5 +38,13 @@
   "email": "Kiarramos@gmail.com",
   "profileimg": "user-img-1680741482826.jpeg",
   "id": 5
+ },
+ {
+  "firstName": "Julian",
+  "password": "$2a$10$tG3VA9v7mfWUIXictEcfaeJi7Rof1nflmpU6bse3W6P8VpUPVQBJ2",
+  "lastName": "Barrionuevo",
+  "email": "elpedrito2@gmail.com",
+  "profileimg": "default-user.png",
+  "id": 6
  }
 ]
