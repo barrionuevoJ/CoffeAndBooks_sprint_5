@@ -46,5 +46,21 @@
   "email": "elpedrito2@gmail.com",
   "profileimg": "default-user.png",
   "id": 6
+ },
+ {
+  "firstName": "Adriel",
+  "password": "$2a$10$j0CYKKmjuOwQ.CAQbW6V7.L6l9LU7dqR9Alx96L0dTD8./Dc4lJRy",
+  "lastName": "Lopez",
+  "email": "Adriel4Furros@gmail.com",
+  "profileimg": "user-img-1680749283403.jpeg",
+  "id": 7
+ },
+ {
+  "firstName": "Walter",
+  "password": "$2a$10$Ph8rYsFBgO7eaLMnCY4N/eKY9LIbDt4XkO50RMwDyQNEAwSmzi7ru",
+  "lastName": "White",
+  "email": "Heisenberg@gmail.com",
+  "profileimg": "user-img-1680801454630.jpg",
+  "id": 8
  }
 ]
