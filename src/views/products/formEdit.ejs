@@ -21,59 +21,124 @@
     
             <main class="create">
                 <section class="add">
-                    <h1>Add Product</h1>
-                    <form action="/products/edit/<%= libro.id %>?_method=PUT" method="POST">
-    
-                        <p>Titulo</p>
-    
-                        <label for="titulo"></label>
-                        <input type="text" name="titulo" id="titulo" placeholder="Titulo" value="<%= libro.titulo %>">
-    
-                        <p>Autor</p>
-    
-                        <label for="autor"></label>
-                        <input type="text" name="autor" id="autor" placeholder="Autor" value="<%= libro.autor %>">
-    
-                        <p>Descripcion</p>
-      
-                        <label for="descripcion"></label>
-                        <input type="text" name="descripcion" id="descripcion" placeholder="Descripcion" value="<%= libro.descripcion %>">
-    
-                        <p>Precio</p>
-    
-                        <label for="precio"></label>
-                        <input type="number" name="precio" id="precio" placeholder="Precio" value="<%= libro.precio %>">
-    
-                        <p>Descuento</p>
-    
-                        <label for="descuento"></label>
-                        <input type="number" name="descuento" id="descuento" placeholder="Descuento" value="<%= libro.descuento %>">
-    
-                        <p>Cantidad</p>
-    
-                        <label for="cantidad"></label>
-                        <input type="number" name="cantidad" id="cantidad" placeholder="cantidad" value="<%= libro.cantidad %>">
 
-                        <p>Genero</p>
-    
-                        <label for="genero"></label>
-                        <input type="text" name="genero" id="genero" placeholder="genero" value="<%= libro.genero %>">
-    
-                        <p>Categoria</p>
-    
-                        <select name="categoria" id="categoria">
-                            <option value="masVendidos">Mas vendidos</option>
-                            <option value="ofertas">Ofertas</option>
-                            <option value="interes">Interes</option>
-                        </select>
+                <form action="/products/" method="post" enctype="multipart/form-data">
 
-                        <div class="button">
-                            <button type="submit"> Subir cambios </button>
+                    <h1>Editar producto</h1>
+
+                    <div class="inputs">
+                        <div class="inputs-top">
+                            <div class="left-side">
+                                <div class="input">
+                                    <label for="titulo">Titulo</label>
+                                    <input type="text" name="titulo" id="titulo"
+                                        value="<%=libro.titulo%>">
+                                    <% if (locals.errors && errors.titulo) { %>
+                                        <div class="feedback">
+                                            <%= errors.titulo.msg %>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <div class="input">
+                                    <label for="descripcion">Descripcion</label>
+                                    <input type="text" name="descripcion" id="descripcion"
+                                        value="<%= libro.descripcion %>">
+                                    <% if (locals.errors && errors.descripcion) { %>
+                                        <div class="feedback">
+                                            <%= errors.descripcion.msg %>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                            </div>
+
+                            <div class="right-side">
+
+                                <div class="input">
+                                    <label for="autor">Autor</label>
+                                    <input type="text" name="autor" id="autor"
+                                        value="<%= libro.autor %>">
+                                    <% if (locals.errors && errors.autor) { %>
+                                        <div class="feedback">
+                                            <%= errors.autor.msg %>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                                <div class="input">
+                                    <label for="categoria">Categoria</label>
+                                    <select name="categoria" id="categoria"
+                                        value="<%= libro.categoria %>">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="masVendidos" <%=locals.old && old.categoria==='masVendidos'
+                                            ? 'selected' : '' ; %>>Mas vendidos</option>
+                                        <option value="ofertas" <%=locals.old && old.categoria==='ofertas' ? 'selected'
+                                            : '' ; %>>Ofertas</option>
+                                        <option value="interes" <%=locals.old && old.categoria==='interes' ? 'selected'
+                                            : '' ; %>>Interes</option>
+                                    </select>
+                                    <% if (locals.errors && errors.categoria) { %>
+                                        <div class="feedback">
+                                            <%= errors.categoria.msg %>
+                                        </div>
+                                        <% } %>
+                                </div>
+
+                            </div>
                         </div>
-    
-                    </form>
-    
-                </section>
+                        <div class="input">
+                            <label for="genero">Genero/s</label>
+                            <input type="text" name="genero" id="genero"
+                                value="<%= libro.genero %>">
+                            <% if (locals.errors && errors.genero) { %>
+                                <div class="feedback">
+                                    <%= errors.genero.msg %>
+                                </div>
+                                <% } %>
+                        </div>
+
+                        <div class="inputs-numbers">
+
+                            <div class="input-number">
+                                <label for="cantidad">Cantidad</label>
+                                <input type="number" name="cantidad" id="cantidad"
+                                    value="<%= libro.cantidad %>">
+                            </div>
+
+                            <div class="input-number">
+                                <label for="descuento">Descuento</label>
+                                <input type="number" name="descuento" id="descuento"
+                                    value="<%= locals.old && old.descuento ? old.descuento: '0' %>">
+                            </div>
+
+                            <div class="input-number">
+                                <label for="precio">Precio</label>
+                                <input type="number" name="precio" id="precio"
+                                    value="<%= libro.precio %>">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="input-file">
+                        <label for="img">Imagen del producto</label>
+                        <input type="file" name="img" id="img" value="<%= libro.img %>">
+                        <% if (locals.errors && errors.img) { %>
+                            <div class="feedback">
+                                <%= errors.img.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit" class="btn-submit" title="Añadir"> Añadir libro </button>
+                        <button type="reset" class="btn-reset" title="Añadir"> Limpiar </button>
+                    </div>
+
+                </form>
+
+            </section>
+
     
             </main>
             <%- include('../partials/mainFooter.ejs') %>>

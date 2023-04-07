@@ -46,5 +46,13 @@
   "email": "elpedrito2@gmail.com",
   "profileimg": "default-user.png",
   "id": 6
+ },
+ {
+  "firstName": "Osamu",
+  "password": "$2a$10$8kD7/tUc/CQTMpmDOgakFuQ.av166VtwzJiMoMb.3XxZPuwvbfzS2",
+  "lastName": "Dazai",
+  "email": "Dazai@hotmail.com",
+  "profileimg": "user-img-1680749192980.jpg",
+  "id": 7
  }
 ]
