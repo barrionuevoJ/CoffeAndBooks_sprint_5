@@ -48,11 +48,11 @@
   "id": 6
  },
  {
-  "firstName": "Osamu",
-  "password": "$2a$10$8kD7/tUc/CQTMpmDOgakFuQ.av166VtwzJiMoMb.3XxZPuwvbfzS2",
-  "lastName": "Dazai",
-  "email": "Dazai@hotmail.com",
-  "profileimg": "user-img-1680749192980.jpg",
-  "id": 7
+  "firstName": "Walter",
+  "password": "$2a$10$Ph8rYsFBgO7eaLMnCY4N/eKY9LIbDt4XkO50RMwDyQNEAwSmzi7ru",
+  "lastName": "White",
+  "email": "Heisenberg@gmail.com",
+  "profileimg": "user-img-1680801454630.jpg",
+  "id": 8
  }
 ]
