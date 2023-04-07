@@ -23,6 +23,10 @@ const controlador = {
         res.render('users/productCart', { carrito, toThousand })
     },
 
+    addCart: (req, res) => {
+        res.redirect('/users/productCart')
+    },
+
     register: (req, res) => {
         res.render('users/register', {});
     },

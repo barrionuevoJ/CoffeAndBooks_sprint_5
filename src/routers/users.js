@@ -21,7 +21,9 @@ router.get('/register', userController.register);
 router.post('/register', uploadFile.single('profileImg'), userRegisterValidation, userController.newUser);
 
 // Carrito
-
 router.get('/productCart', userController.cart)
+
+// Añadir al carro
+router.post('/productCart', userController.addCart);
 
 module.exports = router;
