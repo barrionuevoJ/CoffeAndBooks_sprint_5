@@ -48,11 +48,20 @@
   "id": 6
  },
  {
+<<<<<<< HEAD
   "firstName": "Vincenzo",
   "password": "$2a$10$MyfpxXa6XWThLikVkcifJeFb7o2.WuDeZJBUvcje929VfKZrZRc9m",
   "lastName": "Rubio",
   "email": "vaclod892@gmail.com",
   "profileimg": "user-img-1680825070740.png",
   "id": 7
+=======
+  "firstName": "Walter",
+  "password": "$2a$10$Ph8rYsFBgO7eaLMnCY4N/eKY9LIbDt4XkO50RMwDyQNEAwSmzi7ru",
+  "lastName": "White",
+  "email": "Heisenberg@gmail.com",
+  "profileimg": "user-img-1680801454630.jpg",
+  "id": 8
+>>>>>>> 74be5bf3b3b112afd68471a66b883d5dea4bf1d0
  }
 ]
