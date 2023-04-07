@@ -46,5 +46,13 @@
   "email": "elpedrito2@gmail.com",
   "profileimg": "default-user.png",
   "id": 6
+ },
+ {
+  "firstName": "Vincenzo",
+  "password": "$2a$10$MyfpxXa6XWThLikVkcifJeFb7o2.WuDeZJBUvcje929VfKZrZRc9m",
+  "lastName": "Rubio",
+  "email": "vaclod892@gmail.com",
+  "profileimg": "user-img-1680825070740.png",
+  "id": 7
  }
 ]
