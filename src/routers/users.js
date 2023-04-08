@@ -29,4 +29,8 @@ router.get('/productCart', userController.cart)
 // Añadir al carro
 router.post('/productCart', userController.addCart);
 
+// Lista de usuarios
+
+router.get('/usersList', userController.userList)
+
 module.exports = router;

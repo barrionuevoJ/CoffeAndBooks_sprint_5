@@ -1,0 +1,118 @@
+main.usersList section.lista h1 {
+    margin: 30px 0 0 0;
+}
+
+main.usersList section.lista {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 50px 0;
+    border-radius: 30px;
+    background-color: #ffffff7d;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%);
+}
+
+main.usersList section.lista article button.btn-compra {
+    padding: 15px 35px;
+    border-radius: 25px;
+    border-style: none;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 52%);
+    background-color: #a6d5eb;
+    cursor: pointer;
+}
+
+main.usersList section.lista article button.btn-compra:hover {
+    background-color: #87b9d1;
+}
+
+main.usersList section div.productos div.main-article h4,
+main.usersList section div.productos div.main-article h5,
+main.usersList section div.productos div.main-article p {
+    flex:1;
+    margin-top: 10px;
+}
+
+@media (min-width: 361px) {
+    main.usersList section article img {
+        max-width: 315px;
+        max-height: 475px;
+    }
+
+    main.usersList section h2 {
+        margin: 40px 0 0 0;
+    }
+
+    main.usersList section article {
+        background-color: #648bc9;
+        width: 75vw;
+        margin: 20px 0 45px 0;
+    }
+
+    main.usersList section article div.main-article h4.title {
+        font-size: 2em;
+    }
+
+    main.usersList section article div.main-article h5.author,
+    main.usersList section article div.main-article p.price {
+        font-size: 1.3em;
+    }
+
+    main.usersList section div.productos {
+        display: flex;
+        padding: 2vh 3vw 3vh 3vw;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    main.usersList section a {
+        text-decoration: none;
+        color: white;
+    }
+
+    main.usersList section article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px;
+        width: 720px;
+        border-radius: 20px;
+        margin: 30px 0;
+        box-shadow: 0 5px 10px rgb(0 0 0 / 52%);
+    }
+
+    main.usersList section h2 {
+        margin: 10px 0px;
+    }
+
+    main.usersList section article img {
+        width: 200px;
+        height: 150px;
+    }
+
+    main.usersList section article div.main-article {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+        padding: 20px;
+    }
+
+    main.usersList section article div.main-article h4.title {
+        font-size: inherit;
+    }
+
+    main.usersList section article div.main-article h5.author,
+    main.usersList section article div.main-article p.price {
+        font-size: inherit;
+    }
+
+    main.usersList section div.productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

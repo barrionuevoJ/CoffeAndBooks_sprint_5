@@ -32,6 +32,11 @@ const controlador = {
         });
     },
 
+    userList: (req, res) => {
+        const users = userModel.all();
+        res.render('users/usersList', { users })
+    },
+
     cart: (req, res) => {
         const carrito = productModel.carrito()
         res.render('users/productCart', { carrito, toThousand })
