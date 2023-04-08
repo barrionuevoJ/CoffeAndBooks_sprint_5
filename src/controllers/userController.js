@@ -18,7 +18,18 @@ const controlador = {
         res.render('users/login', {});
     },
     loginProcess: (req, res) => {
-        return res.send(req.body);
+        const User = userModel
+        let userToLogin = User.findByField('email', req.body.email);
+        if (userToLogin) {
+
+        }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'no se encuentra este email en nuestra base de datos'
+                }
+            }
+        });
     },
 
     cart: (req, res) => {

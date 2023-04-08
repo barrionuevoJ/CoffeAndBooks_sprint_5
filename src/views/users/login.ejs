@@ -25,12 +25,16 @@
 
         <main class="loginForm">
             <section class="form">
-                <form action="/" method="post">
+                <form action="/users/login" method="post" enctype="multipart/form-data">
                     <div class="input-user">
                         <label for="firstname" class="input-label"> email</label>
                         <input type="text" name="email" id="email" placeholder="Ingrese email"
                             class="inputs" minlength="3" required />
-
+                        <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>   
+                        <% } %>
                     </div>
 
                     <div class="input-pass">
