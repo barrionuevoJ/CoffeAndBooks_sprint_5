@@ -10,6 +10,9 @@ const uploadFile = multerMiddleware('users', 'user');
 // Formulario de login
 router.get('/login', userController.login);
 
+//procesar el login
+router.post('/login', userController.loginProcess);
+
 //Perfil de usuario
 router.get('/profile/:id', userController.profile);
 
