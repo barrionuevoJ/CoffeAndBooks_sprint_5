@@ -17,6 +17,9 @@ const controlador = {
     login: (req, res) => {
         res.render('users/login', {});
     },
+    loginProcess: (req, res) => {
+        return res.send(req.body);
+    },
 
     cart: (req, res) => {
         const carrito = productModel.carrito()
