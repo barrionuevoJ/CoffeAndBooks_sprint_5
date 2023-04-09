@@ -20,9 +20,21 @@ const controlador = {
     loginProcess: (req, res) => {
         const User = userModel
         let userToLogin = User.findByField('email', req.body.email);
-        if (userToLogin) {
 
+        if (userToLogin) {
+            let isOkLaContraseña = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if (isOkThePassword) {
+                return res.send('Ok puedes ingresar');
+            }
+            return res.render('userLogin', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            });       
         }
+        
         return res.render('users/login', {
             errors: {
                 email: {

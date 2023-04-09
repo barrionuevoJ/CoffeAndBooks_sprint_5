@@ -70,5 +70,13 @@
   "email": "leoncapo@gmail.com",
   "profileimg": "user-img-1680932215990.jpg",
   "id": 9
+ },
+ {
+  "firstName": "EvilJuli",
+  "password": "$2a$10$gS/kiUtonmyX2.KqTmNOEeG51SYzJKXxM3.WC7Y515pDnht0DmG9O",
+  "lastName": "Barrioviejo",
+  "email": "eviljuli@gmail.com",
+  "profileimg": "user-img-1681074077568.jpeg",
+  "id": 10
  }
 ]
