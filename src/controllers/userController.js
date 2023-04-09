@@ -24,7 +24,7 @@ const controlador = {
         if (userToLogin) {
             let isOkLaContraseña = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
-                return res.send('Ok puedes ingresar');
+                return res.redirect('/views/users/usersList.ejs');
             }
             return res.render('userLogin', {
                 errors: {
@@ -34,7 +34,7 @@ const controlador = {
                 }
             });       
         }
-        
+
         return res.render('users/login', {
             errors: {
                 email: {
