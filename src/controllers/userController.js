@@ -22,7 +22,7 @@ const controlador = {
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOkLaContraseña = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if (isOkThePassword) {
                 return res.redirect('/views/users/usersList.ejs');
             }
