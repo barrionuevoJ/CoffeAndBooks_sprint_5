@@ -91,7 +91,7 @@ const controlador = {
         } else {
             if (req.file) {
                 fs.unlinkSync(
-                    path.resolve(__dirname, '../../public/Images/users/' + req.file.filename)
+                    path.resolve(__dirname, '../../public/images/users/' + req.file.filename)
                 )
             }
             delete req.body.password;

@@ -24,7 +24,7 @@ const userRegisterValidation = [
         let file = req.file;
         let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
         if (file) {
-            let fileExtension = path.extname(file.originalname)
+            let fileExtension = (path.extname(file.originalname)).toLowerCase();
             if (!acceptedExtensions.includes(fileExtension)) {
                 throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`)
             }

@@ -78,5 +78,21 @@
   "email": "eviljuli@gmail.com",
   "profileimg": "user-img-1681074077568.jpeg",
   "id": 10
+ },
+ {
+  "firstName": "Profe",
+  "password": "$2a$10$ntpwFYMeAuPjQCQaDMH3pOl0ut5D92z7gYmdev/9ihfPvddUnzv/G",
+  "lastName": "Lauti",
+  "email": "profelauti@dh.com",
+  "profileimg": "user-img-1681135367106.png",
+  "id": 11
+ },
+ {
+  "firstName": "Profe",
+  "password": "$2a$10$SrQsE24en.w8O3YyPAJACeg2qLmoLq4tzXZvr1LYBy6rJMtBODFKe",
+  "lastName": "Lauti",
+  "email": "profelautidh@gmail.com",
+  "profileimg": "user-img-1681137416807.PNG",
+  "id": 12
  }
 ]
