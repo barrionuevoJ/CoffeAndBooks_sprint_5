@@ -4,7 +4,6 @@ main.loginForm section.form {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
 }
 
 main.loginForm section.form form {

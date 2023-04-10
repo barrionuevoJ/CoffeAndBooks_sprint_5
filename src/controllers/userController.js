@@ -4,7 +4,7 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const { validationResult } = require('express-validator')
+const { validationResult } = require('express-validator');
 const userModel = jsonDB('users')
 const productModel = jsonDB('products')
 
@@ -18,21 +18,23 @@ const controlador = {
         res.render('users/login', {});
     },
     loginProcess: (req, res) => {
-        const User = userModel
-        let userToLogin = User.findByField('email', req.body.email);
+        const user = req.body;
+        console.log(user);
+        let userToLogin = userModel.findByField('email', req.body.email);
 
         if (userToLogin) {
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            console.log(isOkThePassword);
             if (isOkThePassword) {
-                return res.redirect('/views/users/usersList.ejs');
+                return res.redirect('/users/profile/' + userToLogin.id);
             }
-            return res.render('userLogin', {
+            return res.render('users/login', {
                 errors: {
                     email: {
-                        msg: 'Las credenciales son inválidas'
+                        msg: 'Las credenciales no son válidas'
                     }
                 }
-            });       
+            });
         }
 
         return res.render('users/login', {
