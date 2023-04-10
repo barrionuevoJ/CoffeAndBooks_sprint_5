@@ -25,11 +25,10 @@
 
         <main class="loginForm">
             <section class="form">
-                <form action="/users/login" method="post" enctype="multipart/form-data">
+                <form action="/users/login" method="post" >
                     <div class="input-user">
-                        <label for="firstname" class="input-label"> email</label>
-                        <input type="text" name="email" id="email" placeholder="Ingrese email"
-                            class="inputs" minlength="3" required />
+                        <label for="email" > Email</label>
+                        <input type="Email" name="email" id="email" placeholder="Ingrese el email"/>
                         <% if (locals.errors && errors.email) { %>
                         <div class="text-danger">
                             <%= errors.email.msg %>
@@ -38,9 +37,9 @@
                     </div>
 
                     <div class="input-pass">
-                        <label for="contraUsuario" class="input-label"> Contraseña </label>
-                        <input type="password" name="contraUsuario" id="contraUsuario"
-                            placeholder="Ingrese su contraseña" class="inputs" minlength="3" required />
+                        <label for="password" class="input-label"> Contraseña </label>
+                        <input type="password" name="password" id="password"
+                            placeholder="Ingrese su contraseña" />
 
                     </div>
 
@@ -48,8 +47,6 @@
                         <label id="check-pass" for="pass-check">Recordar contraseña</label>
                         <input type="checkbox" id="pass-check" minlenght="6">
                     </div>
-                    <p><a href="/">¿Olvidó su contraseña?</a></p>
-
                     <div class="buttons">
                         <button class="btn-submit" type="submit"> Iniciar Sesion</button>
                         <a href="/users/register" class="btn-register"> Registrarse </a>
