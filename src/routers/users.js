@@ -1,11 +1,12 @@
-const express = require('express')
+const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController')
+const userController = require('../controllers/userController');
 
 const multerMiddleware = require('../middleware/multer');
 const userRegisterValidation = require('../middleware/userRegisterValidation')
 const guestMiddleware = require('../middleware/guestMiddleware')
 const authMiddleware = require('../middleware/authMiddleware')
+
 const uploadFile = multerMiddleware('users', 'user');
 
 // Formulario de login
