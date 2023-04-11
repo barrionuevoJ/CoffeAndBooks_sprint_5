@@ -18,14 +18,14 @@ const controlador = {
         res.render('users/login', {});
     },
     loginProcess: (req, res) => {
-        const user = req.body;
-        console.log(user);
         let userToLogin = userModel.findByField('email', req.body.email);
 
         if (userToLogin) {
             let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             console.log(isOkThePassword);
             if (isOkThePassword) {
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
                 return res.redirect('/users/profile/' + userToLogin.id);
             }
             return res.render('users/login', {

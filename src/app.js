@@ -2,6 +2,14 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
+const session = require('express-session');
+
+app.use(session({
+    secret: 'Coffe & Books',
+    resave: false,
+    saveUninitialized: false,
+}));
+
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
@@ -12,7 +20,6 @@ app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
-
 
 // Rutas
 
@@ -26,6 +33,7 @@ app.use('/users', usersRoutes);
 app.use((req, res, next) => {
     res.status(404).render('main/error-404');
 })
+
 
 const port = 3030;
 
