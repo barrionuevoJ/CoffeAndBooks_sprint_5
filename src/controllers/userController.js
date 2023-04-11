@@ -10,8 +10,8 @@ const productModel = jsonDB('products')
 
 const controlador = {
     profile: (req, res) => {
-        return res.render('users/profile', { 
-            user: req.session.userLogged 
+        return res.render('users/profile', {
+            user: req.session.userLogged
         });
     },
 
@@ -26,6 +26,11 @@ const controlador = {
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if (req.body.checkUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                }
+
                 return res.redirect('/users/profile/');
             }
             return res.render('users/login', {
@@ -48,6 +53,7 @@ const controlador = {
 
     logout: (req, res) => {
         req.session.destroy();
+        res.clearCookie('userEmail');
         return res.redirect('/users/login');
     },
 
@@ -76,7 +82,7 @@ const controlador = {
             if (userModel.findByField('email', req.body.email)) {
                 if (req.file) {
                     fs.unlinkSync(
-                        path.resolve(__dirname, '../../public/Images/users/' + req.file.filename)
+                        path.resolve(__dirname, '../../public/images/users/' + req.file.filename)
                     )
                 }
                 let errors = {
@@ -91,7 +97,7 @@ const controlador = {
                 delete user["passwordConfirm"];
                 user.password = bcrypt.hashSync(user.password, 10);
                 userModel.create(user);
-                res.redirect('/users/profile/' + user.id);
+                res.redirect('/users/login/');
             }
         } else {
             if (req.file) {
