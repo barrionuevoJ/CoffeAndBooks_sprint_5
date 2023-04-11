@@ -10,8 +10,9 @@ const productModel = jsonDB('products')
 
 const controlador = {
     profile: (req, res) => {
-        const user = userModel.find(req.params.id)
-        res.render('users/profile', { user })
+        return res.render('users/profile', { 
+            user: req.session.userLogged 
+        });
     },
 
     login: (req, res) => {
@@ -22,11 +23,10 @@ const controlador = {
 
         if (userToLogin) {
             let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
-            console.log(isOkThePassword);
             if (isOkThePassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
-                return res.redirect('/users/profile/' + userToLogin.id);
+                return res.redirect('/users/profile/');
             }
             return res.render('users/login', {
                 errors: {
@@ -44,6 +44,11 @@ const controlador = {
                 }
             }
         });
+    },
+
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/users/login');
     },
 
     userList: (req, res) => {

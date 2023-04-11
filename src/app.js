@@ -1,8 +1,11 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
+
+const app = express();
+
+const userLoggedMiddleware = require('./middleware/userLoggedMIddleware')
 
 app.use(session({
     secret: 'Coffe & Books',
@@ -10,6 +13,7 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+app.use(userLoggedMiddleware)
 
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));

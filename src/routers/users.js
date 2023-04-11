@@ -10,16 +10,18 @@ const authMiddleware = require('../middleware/authMiddleware')
 const uploadFile = multerMiddleware('users', 'user');
 
 // Formulario de login
-router.get('/login',userController.login);
+router.get('/login', guestMiddleware, userController.login);
 
-//procesar el login
+// Procesar el login
 router.post('/login', userController.loginProcess);
 
+// Cerrar sesión
+router.get('/logout', userController.logout);
+
 //Perfil de usuario
-router.get('/profile/:id', authMiddleware,userController.profile);
+router.get('/profile/', authMiddleware,userController.profile);
 
 // Formulario de registro de usuario
-// router.get('/register', userController.register);
 router.get('/register', guestMiddleware, userController.register);
 
 // Procesar el registro 

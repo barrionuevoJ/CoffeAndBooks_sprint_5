@@ -182,6 +182,23 @@ header div.mid-side form button {
         background-color: #648bc9;
     }
 
+    header div.right-side a.profile{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border-radius: 10px;
+        font-size: 1em;
+        width: 30%;
+        padding: 5px 0;
+        margin-right: 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+    header div.right-side a.profile:hover {
+        border-bottom: 1px solid rgb(7, 107, 124);
+    }
+
     header div.right-side a.cart {
         margin: 0;
         font-size: 1.4em;

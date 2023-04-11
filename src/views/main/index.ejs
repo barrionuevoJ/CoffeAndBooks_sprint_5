@@ -31,7 +31,7 @@
 
                         <%- include('../partials/articleIndex', {libro}) %>
 
-                    <% }) %>
+                            <% }) %>
 
                 </div>
             </section>
@@ -44,7 +44,7 @@
 
                         <%- include('../partials/articleIndex', {libro}) %>
 
-                    <% }) %>
+                            <% }) %>
                 </div>
             </section>
 
@@ -56,14 +56,19 @@
 
                         <%- include('../partials/articleIndex', {libro}) %>
 
-                    <% }) %>
+                            <% }) %>
 
                 </div>
             </section>
 
-           <a href="products/Create"><div class="create-button">
-                <i class="fa-solid fa-plus"></i>
-            </div></a>
+            <% if (locals.isLogged) { %>
+
+                <a href="products/Create">
+                    <div class="create-button">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+                <% } %>
         </main>
 
         <%- include('../partials/mainFooter') %>

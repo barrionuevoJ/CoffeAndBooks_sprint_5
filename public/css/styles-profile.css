@@ -32,20 +32,8 @@ main.profile section.user article img {
     height: 150px;
 }
 
-main.profile section.user button:hover {
-    background-color: #c42323;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
-}
-
-main.profile section.user button {
+main.profile section.user a {
     background-color: #d94c4c;
-}
-
-main.profile section.user button:hover {
-    transform: translateY(-7px);
-}
-
-main.profile section.user button {
     width: 200px;
     padding: 15px;
     font-size: 12px;
@@ -59,4 +47,11 @@ main.profile section.user button {
     cursor: pointer;
     outline: none;
     border: none;
+    text-decoration: none;
+}
+
+main.profile section.user a:hover {
+    background-color: #c42323;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-7px);
 }

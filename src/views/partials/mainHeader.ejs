@@ -3,20 +3,28 @@
         <a href="/" class="logo"><img src="/images/Logo.png" alt="Logo"></a>
         <a href="/" class="home">INICIO</a>
         <a href="/products/" class="books">LIBROS</a>
-        <a href="/users/usersList" class="books">ADMIN. USUARIOS</a>
+        <% if (locals.isLogged) { %>
+            <a href="/users/usersList" class="books">ADMIN. USUARIOS</a>
+            <% } %>
     </div>
 
     <div class="mid-side">
         <form action="/products/" method="get">
-            <input type="text" name="search" id="search" placeholder="Buscar libros, comics, y más"
-                required>
+            <input type="text" name="search" id="search" placeholder="Buscar libros, comics, y más" required>
             <button type="submit" title="search-button"><i class="fa fa-search"></i></button>
         </form>
     </div>
     <div class="right-side">
-        <a href="/users/login" class="account">INICIAR SESION</a>
-        <a href="/users/register" class="account">REGISTRARSE</a>
-        <a href="/users/productCart" class="cart"><i class="fa fa-shopping-cart"></i></a>
+        <% if (locals.isLogged) { %>
+            <a href="/users/profile/" class="profile">
+                <img src="/images/users/default-user.png" alt="img" width="50px" height="45px">
+                <span>Mi perfil</span>
+            </a>
+            <a href="/users/productCart" class="cart"><i class="fa fa-shopping-cart"></i></a>
+            <% } else { %>
+                <a href="/users/login" class="account">INICIAR SESION</a>
+                <a href="/users/register" class="account">REGISTRARSE</a>
+                <% } %>
     </div>
     <div class="burger-menu">
         <i class="fa fa-bars burger"></i>

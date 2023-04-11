@@ -90,12 +90,12 @@ main.loginForm section.form form div.buttons button {
 }
 
 main.loginForm section.form form div.buttons a:hover,
-main.loginForm section.form div.buttons button:hover {
+main.loginForm section.form form div.buttons button:hover {
   transform: translateY(-7px);
 }
 
 main.loginForm section.form form div.buttons a:active,
-main.loginForm section.form div.buttons button:active {
+main.loginForm section.form form div.buttons button:active {
   transform: translateY(-1px);
 }
 
