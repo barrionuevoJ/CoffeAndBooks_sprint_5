@@ -94,5 +94,13 @@
   "email": "profelautidh@gmail.com",
   "profileimg": "user-img-1681137416807.PNG",
   "id": 12
+ },
+ {
+  "firstName": "alby",
+  "password": "$2a$10$JDusjA6pjoM.nAW4l6EzVO5J/hsmYPrpO8EWe7.L1JnQykBohL9Am",
+  "lastName": "Ramos",
+  "email": "kiararamosrocha1@gmail.com",
+  "profileimg": "default-user.png",
+  "id": 13
  }
 ]
