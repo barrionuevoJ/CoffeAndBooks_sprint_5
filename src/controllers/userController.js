@@ -31,7 +31,7 @@ const controlador = {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                 }
 
-                return res.redirect('/users/profile/');
+                return res.redirect('/');
             }
             return res.render('users/login', {
                 errors: {
@@ -55,6 +55,23 @@ const controlador = {
         req.session.destroy();
         res.clearCookie('userEmail');
         return res.redirect('/users/login');
+    },
+
+    userDestroy: function (req, res) {
+        const user = userModel.find(req.params.id)
+        if (user.profileimg != 'default-user.png') {
+            fs.unlinkSync(
+                path.resolve(__dirname, '../../public/images/users/' + user.profileimg)
+            )
+        }
+        userModel.delete(user.id);
+        if (req.session.userLogged.id == user.id) {
+            res.locals.isLogged = false;
+        }
+        else {
+            req.cookies.userEmail = res.cookie('userEmail', req.session.userLogged.email, { maxAge: (1000 * 60) * 60 })
+        }
+        return res.redirect('/users/usersList')
     },
 
     userList: (req, res) => {

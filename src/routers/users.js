@@ -16,7 +16,7 @@ router.get('/login', guestMiddleware, userController.login);
 router.post('/login', userController.loginProcess);
 
 // Cerrar sesión
-router.get('/logout', userController.logout);
+router.get('/logout', authMiddleware,userController.logout);
 
 //Perfil de usuario
 router.get('/profile/', authMiddleware,userController.profile);
@@ -31,10 +31,14 @@ router.post('/register', uploadFile.single('profileImg'), userRegisterValidation
 router.get('/productCart', authMiddleware,userController.cart)
 
 // Añadir al carro
-router.post('/productCart', userController.addCart);
+router.post('/productCart', authMiddleware,userController.addCart);
 
 // Lista de usuarios
 
-router.get('/usersList', userController.userList)
+router.get('/usersList', authMiddleware,userController.userList)
+
+// Borrar usuario
+
+router.post('/delete/:id', authMiddleware,userController.userDestroy)
 
 module.exports = router;

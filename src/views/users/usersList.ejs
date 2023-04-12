@@ -29,17 +29,24 @@
                 <div class="usuarios">
                     <% users.forEach(user=> { %>
                         <article>
-                            <img src="/images/users/<%= user.profileimg %>">
-                            <div class="main-article">
-                                <h4 class="title">
+                            <img src="/images/users/<%= user.profileimg %>" alt="userImg" />
+                            <div class="parrafs" style="text-align: initial;">
+                                <p>
+                                    <b>Nombre: </b>
                                     <%= user.firstName %>
-                                </h4>
-                                <h5 class="author">
+                                </p>
+                                <p>
+                                    <b>Apellido: </b>
                                     <%= user.lastName %>
-                                </h5>
+                                </p>
+                                <p>
+                                    <b>Email: </b>
+                                    <%= user.email %>
+                                </p>
                             </div>
-                            <a href="/users/profile/<%= user.id %>"><button class="btn-compra"> Ver
-                                    perfil</button></a>
+                            <form action="/users/delete/<%= user.id %>" method="POST">
+                                <button class="btn-delete" type="submit"> Borrar perfil</button>
+                            </form>
                         </article>
                         <% }); %>
                 </div>

@@ -30,6 +30,7 @@ main.profile section.user article p {
 main.profile section.user article img {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
 }
 
 main.profile section.user a {

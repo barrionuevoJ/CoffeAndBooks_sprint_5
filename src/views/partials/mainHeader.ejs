@@ -17,8 +17,8 @@
     <div class="right-side">
         <% if (locals.isLogged) { %>
             <a href="/users/profile/" class="profile">
-                <img src="/images/users/default-user.png" alt="img" width="50px" height="45px">
-                <span>Mi perfil</span>
+                <img src="/images/users/<%= locals.userLogged.profileimg %>" alt="img">
+                <span><%= locals.userLogged.firstName %>  <%= locals.userLogged.lastName %></span>
             </a>
             <a href="/users/productCart" class="cart"><i class="fa fa-shopping-cart"></i></a>
             <% } else { %>

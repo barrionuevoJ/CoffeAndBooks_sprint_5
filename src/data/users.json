@@ -1,35 +1,11 @@
 [
  {
-  "firstName": "Pedro",
-  "password": "$2a$10$GrkTKNl8Ihn0/eRALrG8hu3J9rO/pS.VE7lHAhF3K2LaNIdhml6ES",
-  "lastName": "Martinez",
-  "email": "elpedrito@gmail.com",
-  "profileimg": "default-user.png",
-  "id": 1
- },
- {
-  "firstName": "Pedro",
-  "password": "$2a$10$LecynId21dQzXsKlBqL2v.LyiyQFIaPL/4Jux8VSaGZNjHAPd1zt.",
-  "lastName": "Martinez",
-  "email": "elpedrito1@gmail.com",
-  "profileimg": "default-user.png",
-  "id": 2
- },
- {
   "firstName": "Julian",
   "password": "$2a$10$HC7yBeNKloOa0UssmI8yoeLHBA5GaLwOdkyXVp7AU50ZoLoUIk0fC",
   "lastName": "Barrionuevo",
   "email": "julianbarrionuevo10@gmail.com",
   "profileimg": "user-img-1680741202868.jpeg",
-  "id": 3
- },
- {
-  "firstName": "Valentino",
-  "password": "$2a$10$GjiExToqSnUO.u/mW4AnYezdyfST9tcS1WdJ1XAD.YhN4NzT7zN3.",
-  "lastName": "Dell'Olio",
-  "email": "valendell@gmail.com",
-  "profileimg": "user-img-1680741321910.jpg",
-  "id": 4
+  "id": 1
  },
  {
   "firstName": "Kiara",
@@ -37,15 +13,7 @@
   "lastName": "Ramos",
   "email": "Kiarramos@gmail.com",
   "profileimg": "user-img-1680741482826.jpeg",
-  "id": 5
- },
- {
-  "firstName": "Julian",
-  "password": "$2a$10$tG3VA9v7mfWUIXictEcfaeJi7Rof1nflmpU6bse3W6P8VpUPVQBJ2",
-  "lastName": "Barrionuevo",
-  "email": "elpedrito2@gmail.com",
-  "profileimg": "default-user.png",
-  "id": 6
+  "id": 3
  },
  {
   "firstName": "Vincenzo",
@@ -53,7 +21,7 @@
   "lastName": "Rubio",
   "email": "vaclod892@gmail.com",
   "profileimg": "user-img-1680825070740.png",
-  "id": 7
+  "id": 4
  },
  {
   "firstName": "Walter",
@@ -61,7 +29,7 @@
   "lastName": "White",
   "email": "Heisenberg@gmail.com",
   "profileimg": "user-img-1680801454630.jpg",
-  "id": 8
+  "id": 5
  },
  {
   "firstName": "Leon",
@@ -69,7 +37,7 @@
   "lastName": "Kennedy",
   "email": "leoncapo@gmail.com",
   "profileimg": "user-img-1680932215990.jpg",
-  "id": 9
+  "id": 6
  },
  {
   "firstName": "EvilJuli",
@@ -77,23 +45,7 @@
   "lastName": "Barrioviejo",
   "email": "eviljuli@gmail.com",
   "profileimg": "user-img-1681074077568.jpeg",
-  "id": 10
- },
- {
-  "firstName": "Profe",
-  "password": "$2a$10$ntpwFYMeAuPjQCQaDMH3pOl0ut5D92z7gYmdev/9ihfPvddUnzv/G",
-  "lastName": "Lauti",
-  "email": "profelauti@dh.com",
-  "profileimg": "user-img-1681135367106.png",
-  "id": 11
- },
- {
-  "firstName": "Profe",
-  "password": "$2a$10$SrQsE24en.w8O3YyPAJACeg2qLmoLq4tzXZvr1LYBy6rJMtBODFKe",
-  "lastName": "Lauti",
-  "email": "profelautidh@gmail.com",
-  "profileimg": "user-img-1681137416807.PNG",
-  "id": 12
+  "id": 7
  },
  {
   "firstName": "alby",
@@ -101,6 +53,6 @@
   "lastName": "Ramos",
   "email": "kiararamosrocha1@gmail.com",
   "profileimg": "default-user.png",
-  "id": 13
+  "id": 8
  }
 ]

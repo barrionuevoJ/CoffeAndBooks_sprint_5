@@ -182,7 +182,13 @@ header div.mid-side form button {
         background-color: #648bc9;
     }
 
-    header div.right-side a.profile{
+    header div.right-side a.profile img {
+        width: 50px;
+        height: 45px;
+        border-radius: 50%;
+    }
+
+    header div.right-side a.profile {
         display: flex;
         align-items: center;
         justify-content: space-evenly;

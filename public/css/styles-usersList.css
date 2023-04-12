@@ -13,24 +13,27 @@ main.usersList section.lista {
     box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%);
 }
 
-main.usersList section.lista article button.btn-compra {
-    padding: 15px 35px;
-    border-radius: 25px;
-    border-style: none;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 52%);
-    background-color: #a6d5eb;
+main.usersList section.lista form button.btn-delete {
+    background-color: #d94c4c;
+    width: 200px;
+    padding: 15px;
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
     cursor: pointer;
+    outline: none;
+    border: none;
 }
 
-main.usersList section.lista article button.btn-compra:hover {
-    background-color: #87b9d1;
-}
-
-main.usersList section div.productos div.main-article h4,
-main.usersList section div.productos div.main-article h5,
-main.usersList section div.productos div.main-article p {
-    flex:1;
-    margin-top: 10px;
+main.usersList section.lista form button.btn-delete:hover {
+    background-color: #c42323;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-7px);
 }
 
 @media (min-width: 361px) {
@@ -72,15 +75,23 @@ main.usersList section div.productos div.main-article p {
         color: white;
     }
 
+    main.usersList section article p {
+        font-size: 1.5em;
+        margin: 35px 0;
+    }
+
     main.usersList section article {
         display: flex;
+        flex: 1;
         flex-direction: column;
         align-items: center;
-        padding: 25px;
-        width: 720px;
+        justify-content: space-evenly;
+        background-color: #709ce1e8;
+        margin: 7vh 0;
+        width: 500px;
+        height: 550px;
         border-radius: 20px;
-        margin: 30px 0;
-        box-shadow: 0 5px 10px rgb(0 0 0 / 52%);
+        box-shadow: 0 0 10px 5px rgb(0 0 0 / 52%);
     }
 
     main.usersList section h2 {
@@ -88,31 +99,8 @@ main.usersList section div.productos div.main-article p {
     }
 
     main.usersList section article img {
-        width: 200px;
+        width: 150px;
         height: 150px;
-    }
-
-    main.usersList section article div.main-article {
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
-        padding: 20px;
-    }
-
-    main.usersList section article div.main-article h4.title {
-        font-size: inherit;
-    }
-
-    main.usersList section article div.main-article h5.author,
-    main.usersList section article div.main-article p.price {
-        font-size: inherit;
-    }
-
-    main.usersList section div.productos {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
+        border-radius: 50%;
     }
 }
