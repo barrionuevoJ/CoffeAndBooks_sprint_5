@@ -8,13 +8,29 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     title: {
-        type: DataTypes.VARCHAR
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    descripcion: {
-
-    }
+    description: {
+      type: DataTypes.TEXT,
+    },
+    stock: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    img: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    offer: {
+      type: DataTypes.INTEGER,
+    },
   };
 
-  let config = { tableName: "products" };
+  let config = { tableName: "products", timestamps: false};
   return (Product = sequelize.define(alias, cols, config));
 };
