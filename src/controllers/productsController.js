@@ -6,13 +6,13 @@ const path = require("path");
 
 const db = require("../database/models");
 
-const { Product } = require("../database/models");
+const { Producto } = require("../database/models");
 
 const { validationResult } = require("express-validator");
 
 const controlador = {
   db: (req, res) => {
-    Product.findAll().then((productos) => {
+    Producto.findAll().then((productos) => {
       res.send(productos);
     });
   },
@@ -29,44 +29,43 @@ const controlador = {
     res.render("products/productDetail", { libro: product, toThousand });
   },
 
-  // Crear un producto
-  create: (req, res) => {
-    res.render("products/formCreate");
-  },
+  //  Sprint 5
 
-  // Guardar un producto
+  // Guardar un producto - Sprint 5
 
-  store: (req, res) => {
-    const resultValidation = validationResult(req);
+  // store: (req, res) => {
+  //   const resultValidation = validationResult(req);
 
-    if (resultValidation.errors.length > 0) {
-      if (req.file) {
-        fs.unlinkSync(
-          path.resolve(
-            __dirname,
-            "../../public/Images/products/" + req.file.filename
-          )
-        );
-      }
-      return res.render("products/formCreate", {
-        errors: resultValidation.mapped(),
-        old: req.body,
-      });
-    } else {
-      let product = req.body;
-      product.img = req.file ? req.file.filename : "default-image.png";
-      productModel.create(product);
-    }
-    return res.redirect("/products/");
-  },
+  //   if (resultValidation.errors.length > 0) {
+  //     if (req.file) {
+  //       fs.unlinkSync(
+  //         path.resolve(
+  //           __dirname,
+  //           "../../public/Images/products/" + req.file.filename
+  //         )
+  //       );
+  //     }
+  //     return res.render("products/formCreate", {
+  //       errors: resultValidation.mapped(),
+  //       old: req.body,
+  //     });
+  //   } else {
+  //     let product = req.body;
+  //     product.img = req.file ? req.file.filename : "default-image.png";
+  //     productModel.create(product);
+  //   }
+  //   return res.redirect("/products/");
+  // },
 
-  // Editar un producto
+  // Editar un producto - sprint 5
+
   edit: (req, res) => {
     let productToEdit = productModel.find(req.params.id);
     res.render("products/formEdit", { libro: productToEdit });
   },
 
   // Actualizar un producto
+  
   update: (req, res) => {
     let productToEdit = productModel.find(req.params.id);
 
@@ -81,10 +80,46 @@ const controlador = {
   },
 
   // Eliminar un producto
+
   destroy: function (req, res) {
     productModel.delete(req.params.id);
     res.redirect("/products/");
   },
+
+
+  // Sprint 6
+  add: (req, res) => {
+    let promGeneros = Generos.findAll();
+    let promAutores = Autores.findAll();
+    let promCategorias = Categorias.findAll();
+
+    Promise.all([promGeneros, promAutores, promCategorias])
+      .then(([generos, autores, categorias]) => {
+        return res.render("products/formCreate");
+      })
+      .catch((error) => res.send(error));
+  },
+
+  // Crear un producto
+  create: function (req, res) {
+    Producto.create({
+      titulo: req.body.titulo,
+      descripcion: req.body.descripcion,
+      cantidad: req.body.cantidad,
+      precio: req.body.precio,
+      img: req.body.img,
+      descuento: req.body.descuento,
+      genero_id: req.body.genero_id,
+      autor_id: req.body.autor_id,
+      categoria_id: req.body.categoria_id,
+    })
+      .then(() => {
+        return res.redirect("/products");
+      })
+      .catch((error) => res.send(error));
+  },
+
+  // Formulario de edicion de un producto
 };
 
 module.exports = controlador;

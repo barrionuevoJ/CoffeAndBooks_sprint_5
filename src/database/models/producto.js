@@ -1,24 +1,24 @@
 module.exports = (sequelize, DataTypes) => {
-  let alias = "Product";
+  let alias = "Producto";
 
   let cols = {
-    id_product: {
+    id_producto: {
       autoIncrement: true,
       type: DataTypes.INTEGER,
       primaryKey: true,
     },
-    title: {
+    titulo: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    descripcion: {
       type: DataTypes.TEXT,
     },
-    stock: {
+    cantidad: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    price: {
+    precio: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -26,11 +26,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    offer: {
+    descuento: {
       type: DataTypes.INTEGER,
     },
   };
 
-  let config = { tableName: "products", timestamps: false};
-  return (Product = sequelize.define(alias, cols, config));
+  let config = { tableName: "productos", timestamps: false};
+  return (Producto = sequelize.define(alias, cols, config));
 };

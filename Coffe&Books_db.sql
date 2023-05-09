@@ -1,0 +1,1 @@
+SELECT * FROM `coffe&books_db`.productos;
